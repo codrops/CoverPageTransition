@@ -172,7 +172,7 @@ main {
 	margin-bottom: 5vh;
 	grid-template-columns: 100%;
 	align-items: start;
-	grid-column-gap: 5vw;
+	grid-row-gap: 1rem;
 	grid-template-areas: 'title' 'credits' 'sponsor';
 	align-content: space-between;
 	will-change: transform, opacity;
@@ -187,20 +187,20 @@ main {
 .frame__title {
 	grid-area: title;
 	display: flex;
-	line-height: 1;
+	flex-wrap: wrap;
+	width: 14rem;
 }
 
 .frame__title-main {
 	font-size: 0.85rem;
 	margin: 0;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 .frame__title-back {
 	position: relative;
 	display: flex;
 	align-items: flex-end;
-	margin-bottom: 0.15rem;
 }
 
 .frame__title-back span {
@@ -209,6 +209,8 @@ main {
 
 .frame__title-back svg {
 	fill: currentColor;
+	width: 16px;
+	height: 16px;
 }
 
 .content {
@@ -399,6 +401,7 @@ main {
 	.frame {
 		margin-bottom: 0;
 		grid-template-columns: repeat(3,1fr);
+		grid-row-gap: 0;
 		grid-column-gap: 5vw;
 		grid-template-rows: auto;
 		grid-template-areas: 'title credits sponsor';
